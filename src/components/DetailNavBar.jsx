@@ -9,6 +9,7 @@ const DetailNavBar = ()=>{
       Height='420' 
       Top='3'
       src="https://raw.githubusercontent.com/congchu/coment-shop-server/master/assets/images/product1.jpg"
+      alt="비숑 블랙 머그잔"
       />
       <ProductTitle>비숑 블랙 머그잔</ProductTitle>
       <ProdPrice>21,800원</ProdPrice>
