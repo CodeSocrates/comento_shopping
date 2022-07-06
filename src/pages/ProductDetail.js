@@ -1,5 +1,10 @@
+import DetailNavBar from '../components/DetailNavBar';
+
 const ProductDetail = ()=>{
-    return (<div>상품상세 페이지</div>);
+    return (
+        <DetailNavBar />
+
+    );
 }
 
 export default ProductDetail;

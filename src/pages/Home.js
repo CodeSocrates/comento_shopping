@@ -18,30 +18,30 @@ const Home = () => {
       <GrayLine />
 
       <ProductSection>
-        <ProductCard 
+        <ProductCard
           name="비숑 블랙 머그잔"
           thumbnail="https://raw.githubusercontent.com/congchu/coment-shop-server/master/assets/images/product1.jpg"
-          description="쌀쌀한 날씨에 따뜻한 우유, 커피 한잔하기 좋은\n
-          블랙 & 화이트 비숑 머그잔입니다."
+          description="쌀쌀한 날씨에 따뜻한 우유, 커피 한잔하기 좋은"
+          secondDesc="블랙 & 화이트 비숑 머그잔입니다."
         />
 
-        <ProductCard 
+        <ProductCard
           name="가열 보온 티코스터 온열 원터치 컵 받침대"
           thumbnail="https://raw.githubusercontent.com/congchu/coment-shop-server/master/assets/images/product2.jpg"
-          description="언제나 따뜻하게 최대 12시간 동안\n
-          최대 60도의 온도로 따듯한 차를 즐길 수 있습니다."
+          description="언제나 따뜻하게 최대 12시간 동안"
+          secondDesc="최대 60도의 온도로 따듯한 차를 즐길 수 있습니다."
         />
 
-        <ProductCard 
+        <ProductCard
           name="벨루즈까사 솜사탕 파스텔 머그 4종 세트"
           thumbnail="https://raw.githubusercontent.com/congchu/coment-shop-server/master/assets/images/product3.jpg"
-          description="솜사탕처럼 부드러운 쉐입에 스트라이프 조각이\n
-          더해져 심플하면서도 세련된 파스텔 컬러의 머그"
+          description="솜사탕처럼 부드러운 쉐입에 스트라이프 조각이"
+          secondDesc="더해져 심플하면서도 세련된 파스텔 컬러의 머그"
         />
       </ProductSection>
 
     </div>
-    );
+  );
 };
 
 const ThemeSection = styled.div`
@@ -59,7 +59,6 @@ const GrayLine = styled.div`
 const ProductSection = styled.div`
   padding: 24px;
   width: 400px;
-  object-fit: cover;
 `;
 
 const NavLine = styled.div`
