@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ProductCard = ({ name, description, thumbnail, secondDesc }) => {
+const ProductCard = ({ name, description, thumbnail }) => {
     return (
       <div>
 
@@ -10,7 +10,6 @@ const ProductCard = ({ name, description, thumbnail, secondDesc }) => {
         </ProductTitle>
         <ProductBody>
         {description}
-        {secondDesc}
         </ProductBody>
       </div>
     );
@@ -49,5 +48,6 @@ letter-spacing: -0.01em;
 text-align: left;
 padding: 0px 0px 40px 0px;
 display: block;
+white-space: pre-line;
   `;  
   export default ProductCard;
