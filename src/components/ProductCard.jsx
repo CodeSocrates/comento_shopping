@@ -4,7 +4,7 @@ const ProductCard = ({ name, description, thumbnail, secondDesc }) => {
     return (
       <div>
 
-        <img Width='400' Height='250' Top='3'src={thumbnail} alt={name} />
+        <ProdImg Width='400' Height='250' Top='3'src={thumbnail} alt={name} />
         <ProductTitle>
         {name}
         </ProductTitle>
@@ -15,6 +15,13 @@ const ProductCard = ({ name, description, thumbnail, secondDesc }) => {
       </div>
     );
   };
+
+  const ProdImg = styled.img`
+    object-fit: cover;
+    width: 400px;
+    height: 250px;
+  `
+
   const ProductTitle = styled.div`
 height: 26px;
 width: 400px;
