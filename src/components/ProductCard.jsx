@@ -36,6 +36,7 @@ padding: 12px 0px;
 white-space: pre-wrap;
   `;  
   const ProductBody = styled.div`
+  white-space: pre-line;
 height: 42px;
 width: 400px;
 left: 0px;
@@ -48,6 +49,5 @@ letter-spacing: -0.01em;
 text-align: left;
 padding: 0px 0px 40px 0px;
 display: block;
-white-space: pre-line;
   `;  
   export default ProductCard;

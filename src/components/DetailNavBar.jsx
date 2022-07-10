@@ -4,12 +4,9 @@ const DetailNavBar = ()=>{
   return (
     <div>
       <NavTitle>코멘토 쇼핑</NavTitle>
-      <img 
-      Width='390' 
-      Height='420' 
-      Top='3'
-      src="https://raw.githubusercontent.com/congchu/coment-shop-server/master/assets/images/product1.jpg"
-      alt="비숑 블랙 머그잔"
+      <DetailImg 
+      src={"https://raw.githubusercontent.com/congchu/coment-shop-server/master/assets/images/product1.jpg"}
+      alt={"비숑 블랙 머그잔"}
       />
       <ProductTitle>비숑 블랙 머그잔</ProductTitle>
       <ProdPrice>21,800원</ProdPrice>
@@ -19,12 +16,17 @@ const DetailNavBar = ()=>{
   );
 };
 
+const DetailImg = styled.img`
+  width:100%;
+  height:420px;
+  padding-top:3px;
+`
+
 const NavTitle = styled.div`
   margin-top: 3px;
   padding: 17px;
-  width: 390px;
+  width: 100%;
 
-  align-items: center;
   display: flex;
   align-items: center;
   text-align: center;
@@ -63,7 +65,7 @@ const ProdPrice = styled.div`
 `
 
 const ProdButton = styled.button`
-  width:200px;
+  width: 50%;
   height: 48px;
 `
 
