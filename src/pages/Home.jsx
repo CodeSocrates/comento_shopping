@@ -3,21 +3,61 @@ import Navigation from '../components/Navigation';
 import ThemeButton from '../components/ThemeButton';
 import ProductCard from '../components/ProductCard';
 import styled from 'styled-components';
+import { mockTheme1Produdcts, mockTheme2Produdcts } from "../data/mockData"
+import {useState} from "react";
+import { useEffect } from 'react';
 
 const Home = () => {
+  //다시 렌더링 되는 조건
+  const[products, setProducts] = useState();
+
+  //조건에 의해서 실행되는 함수
+  useEffect(() => {
+    setTimeout(() => {
+      setProducts(mockTheme1Produdcts);
+    }, 1000);
+  }, []);
+
+  const onClickThemeButton = (themeId) => {
+    if(themeId === 1) {
+      setProducts(mockTheme1Produdcts);
+    } else if (themeId === 2) {
+      setProducts(mockTheme2Produdcts);
+    }
+  };
+  
   return (
     <div>
       <NavStyle><Navigation /></NavStyle>
       <NavLine />
 
       <ThemeSection>
-        <ThemeButton themeName={"#겨울방한템"} />
-        <ThemeButton themeName={"#따순머그컵"} />
+        <ThemeButton 
+        themeName={"#겨울방한템"} 
+        onClick={() => onClickThemeButton(1)}
+        />
+        <ThemeButton 
+        themeName={"#따순머그컵"} 
+        onClick={() => onClickThemeButton(2)}
+        />
       </ThemeSection>
 
       <GrayLine />
 
       <ProductSection>
+        {products ? (
+          products.map((product) => (
+            <ProductCard
+              key={product.id}  
+              name={product.name}
+              description= {product.description}
+              thumbnail = {product.thumbnail}
+            />
+          ))
+        ) : (
+          <div>테마를 선택해주세요</div>
+        )}
+        {/*
         <ProductCard
           name="비숑 블랙 머그잔"
           thumbnail={"https://raw.githubusercontent.com/congchu/coment-shop-server/master/assets/images/product1.jpg"}
@@ -36,6 +76,7 @@ const Home = () => {
           description={"솜사탕처럼 부드러운 쉐입에 스트라이프 조각이\n더해져 심플하면서도 세련된 파스텔 컬러의 머그"}
           //JS가 다루는 스트링 타입 값
         />
+        */}
       </ProductSection>
 
     </div>
