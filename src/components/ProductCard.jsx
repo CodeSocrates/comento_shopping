@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-const ProductCard = ({ name, description, thumbnail }) => {
+const ProductCard = ({ name, description, thumbnail, onClick }) => {
     return (
-      <div>
-
+      <ProductCardStyled onClick={onClick}>
         <ProdImg Width='400' Height='250' Top='3'src={thumbnail} alt={name} />
         <ProductTitle>
         {name}
@@ -11,9 +10,13 @@ const ProductCard = ({ name, description, thumbnail }) => {
         <ProductBody>
         {description}
         </ProductBody>
-      </div>
+      </ProductCardStyled>
     );
   };
+
+  const ProductCardStyled = styled.div`
+    padding-bottom: 40px;
+  `
 
   const ProdImg = styled.img`
     object-fit: cover;

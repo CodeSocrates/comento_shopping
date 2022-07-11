@@ -6,10 +6,12 @@ import styled from 'styled-components';
 import { mockTheme1Produdcts, mockTheme2Produdcts } from "../data/mockData"
 import {useState} from "react";
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   //다시 렌더링 되는 조건
   const[products, setProducts] = useState();
+  const navigate = useNavigate();
 
   //조건에 의해서 실행되는 함수
   useEffect(() => {
@@ -48,6 +50,7 @@ const Home = () => {
         {products ? (
           products.map((product) => (
             <ProductCard
+              onClick={() => navigate(`product/${product.id}`)}
               key={product.id}  
               name={product.name}
               description= {product.description}
