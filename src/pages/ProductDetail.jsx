@@ -22,7 +22,7 @@ const ProductDetail = () => {
         product && (
         <>
           <div>상품 ID : {product.id}</div>
-          <img src={product.thumbnail} width="200" />
+          <img src={product.thumbnail} width="200" alt={product.name}/>
           <div>{product.name}</div>
           <div>{product.description}</div>
         </>
