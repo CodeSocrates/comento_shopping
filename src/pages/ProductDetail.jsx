@@ -16,9 +16,9 @@ const ProductDetail = () => {
   }, []);
 
   return (
+      <>
       <DetailNavBar />
-      
-      /*{
+      {
         product && (
         <>
           <div>상품 ID : {product.id}</div>
@@ -26,7 +26,8 @@ const ProductDetail = () => {
           <div>{product.name}</div>
           <div>{product.description}</div>
         </>
-      )}*/
+      )}
+      </>
   );
 }
 export default ProductDetail;
